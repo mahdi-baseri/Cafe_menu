@@ -54,6 +54,7 @@ div{
 }
 .frame .text .small{
   font-size: 6px;
+  max-lines: 2;
 }
 .frame .food-img{
     position: absolute;
