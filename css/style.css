@@ -9,11 +9,31 @@ body {
   background-size: cover;
   min-height: 100vh;
 }
+div{
+  transition: all 2s ease 0s;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: playfair ;
+  src: url(../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: montserat;
+  src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+.playfair{
+  font-family: playfair;
+}
+.montserat{
+  font-family: montserat;
+  color: #f37000;
+  font-size: 10px;
+  font-weight: bold;
+}
 .frame {
   position: relative;
   text-align: center;
   color: white;
-  margin-top: 50vh;
   padding-left: 30px;
 }
 .frame img{
@@ -25,9 +45,15 @@ body {
   left: 50%;
   transform: translate(-50%, -50%); */
   top: 50%;
-  right: 0;
-  text-align: center;
+  left: 91%;
+  width: 60%;
+  height: 70%;
+  text-align: left;
+  font-size: smaller;
   transform: translate(-50%, -50%);
+}
+.frame .text .small{
+  font-size: 6px;
 }
 .frame .food-img{
     position: absolute;
