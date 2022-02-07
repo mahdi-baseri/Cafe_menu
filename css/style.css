@@ -23,12 +23,12 @@ div{
 }
 .playfair{
   font-family: playfair;
-  font-size: 12px;
+  font-size: 14px;
   
 }
 .montserat{
   font-family: montserat;
-  color: #f37000;
+  color: black;
   font-size: 5px;
   font-weight: bold;
 }
