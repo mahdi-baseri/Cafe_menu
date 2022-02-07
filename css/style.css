@@ -36,7 +36,7 @@ div{
   position: relative;
   text-align: center;
   color: white;
-  padding-left: 30px;
+  /* padding-left: 30px; */
   margin: 0 8px 0 10px;
 }
 .frame img{
@@ -50,7 +50,7 @@ div{
   top: 50%;
   left: 85%;
   width: 50%;
-  line-height: 13px;
+  line-height: 14px;
   text-align: left;
   font-size: smaller;
   transform: translate(-50%, -50%);
@@ -91,3 +91,49 @@ div{
     bottom: 4px;
 }
 
+
+/* # Preloader */
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #1a1814;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #1a1814;
+  border-top-color: #cda45e;
+  border-bottom-color: #cda45e;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

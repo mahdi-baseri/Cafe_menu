@@ -17,9 +17,18 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    
+    <!-- Animate css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="row d-flex justify-content-center" style="margin-top: 50vh;">
+    <div id="loader"></div>
+    <div id="content" class="container-fluid" style="margin-top: 50vh">
+    <div class="row d-flex justify-content-center animate__fadeInUp animate__animated" >
       <div class="col-5 my-2 frame">
         <img src="img/frame.png" alt="" class="img-fluid" />
         <img class="food-img" src="img/Sushi.png" alt="" />
@@ -89,5 +98,12 @@
         </div>
       </div>
     </div>
+  </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+   
   </body>
 </html>
