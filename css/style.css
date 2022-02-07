@@ -57,13 +57,13 @@ div{
 }
 .frame .food-img{
     position: absolute;
-    height: 110%;
-    top: -5px;
+    height: 100%;
+    top: 0px;
     left: -3px;
     object-fit: contain;
     -webkit-filter: drop-shadow(5px 5px 10px #000000b6);
     filter: drop-shadow(5px 5px 10px #000000a9);
-    transform: rotate(45deg);
+    /* transform: rotate(45deg); */
 }
 .frame .cost{
     position: absolute;
