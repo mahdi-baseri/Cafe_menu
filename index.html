@@ -17,7 +17,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    
+
     <!-- Animate css -->
     <link
       rel="stylesheet"
@@ -27,83 +27,153 @@
   </head>
   <body>
     <div id="loader"></div>
-    <div id="content" class="container-fluid" style="margin-top: 50vh">
-    <div class="row d-flex justify-content-center animate__fadeInUp animate__animated" >
-      <div class="col-5 my-2 frame">
-        <img src="img/frame.png" alt="" class="img-fluid" />
-        <img class="food-img" src="img/cake.png" alt="" />
-        <div class="text">
-          <p class="playfair m-0">Cake</p>
-          <p class="montserat m-0">CONSECTOR ELIT</p>
-          <!-- <p class="small">
+    <div id="content" class="container-fluid">
+      <header>
+        <nav class="navbar navbar-expand">
+          <a href="#">
+            <img src="img/menu.png" alt="" width="25px" />
+          </a>
+          <p class="my-auto">Logo</p>
+        </nav>
+      </header>
+      <main style="margin-top: 43vh;">
+        <div id="categories" class="categories animate__animated animate__fadeInUp">
+          <div class="cat_item" onclick="filterSelection('all')">
+            <p>All</p>
+          </div>
+          <div class="cat_item" onclick="filterSelection('foods')">
+            <p>Foods</p>
+          </div>
+          <div class="cat_item" onclick="filterSelection('drinks')">
+            <p>Drinks</p>
+          </div>
+          <div class="cat_item">
+            <p>Salads</p>
+          </div>
+        </div>
+
+        <div
+          class="row d-flex" id="con" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1500"
+        >
+          <div class="col-5 my-2 frame filterItem">
+            <img src="img/frame.png" alt="" class="img-fluid" />
+            <img class="food-img" src="img/cake.png" alt="" />
+            <div class="text">
+              <p class="playfair m-0">Cake</p>
+              <p class="montserat m-0">CONSECTOR ELIT</p>
+              <!-- <p class="small">
             Lorem ipsum dolor sit amet, consectetur adipiscing , sed do eiusmod
             tempor.
           </p> -->
-        </div>
-        <div class="cost">
-          <img src="img/line.png" class="top" alt="" />
-          <p>25</p>
-          <img src="img/line.png" class="bottom" alt="" />
-        </div>
-      </div>
-      <div class="col-5 my-2 frame">
-        <img src="img/frame.png" alt="" class="img-fluid" />
-        <img class="food-img" src="img/gril.png" alt="" />
-        <div class="text">
-          <p class="playfair m-0">Stack</p>
-          <p class="montserat m-0">CONSECTOR ELIT</p>
-          <!-- <p class="small">
+            </div>
+            <div class="cost">
+              <img src="img/line.png" class="top" alt="" />
+              <p>25</p>
+              <img src="img/line.png" class="bottom" alt="" />
+            </div>
+          </div>
+          <div class="col-5 my-2 frame filterItem">
+            <img src="img/frame.png" alt="" class="img-fluid" />
+            <img class="food-img" src="img/gril.png" alt="" />
+            <div class="text">
+              <p class="playfair m-0">Stack</p>
+              <p class="montserat m-0">CONSECTOR ELIT</p>
+              <!-- <p class="small">
             Lorem ipsum dolor sit amet, consectetur adipiscing , sed do eiusmod
             tempor.
           </p> -->
-        </div>
-        <div class="cost">
-          <img src="img/line.png" class="top" alt="" />
-          <p>78</p>
-          <img src="img/line.png" class="bottom" alt="" />
-        </div>
-      </div>
-      <div class="col-5 my-2 frame">
-        <img src="img/frame.png" alt="" class="img-fluid" />
-        <img class="food-img" src="img/hamberger.png" alt="" />
-        <div class="text">
-          <p class="playfair m-0">Hamberger</p>
-          <p class="montserat m-0">CONSECTOR ELIT</p>
-          <!-- <p class="small">
+            </div>
+            <div class="cost">
+              <img src="img/line.png" class="top" alt="" />
+              <p>78</p>
+              <img src="img/line.png" class="bottom" alt="" />
+            </div>
+          </div>
+          <div class="col-5 my-2 frame filterItem foods">
+            <img src="img/frame.png" alt="" class="img-fluid" />
+            <img class="food-img" src="img/hamberger.png" alt="" />
+            <div class="text">
+              <p class="playfair m-0">Hamberger</p>
+              <p class="montserat m-0">CONSECTOR ELIT</p>
+              <!-- <p class="small">
             Lorem ipsum dolor sit amet, consectetur adipiscing , sed do eiusmod
             tempor.
           </p> -->
-        </div>
-        <div class="cost">
-          <img src="img/line.png" class="top" alt="" />
-          <p>46</p>
-          <img src="img/line.png" class="bottom" alt="" />
-        </div>
-      </div>
-      <div class="col-5 my-2 frame">
-        <img src="img/frame.png" alt="" class="img-fluid" />
-        <img class="food-img" src="img/pizza.png" alt="" />
-        <div class="text">
-          <p class="playfair m-0">Pizza</p>
-          <p class="montserat m-0">CONSECTOR ELIT</p>
-          <!-- <p class="small">
+            </div>
+            <div class="cost">
+              <img src="img/line.png" class="top" alt="" />
+              <p>46</p>
+              <img src="img/line.png" class="bottom" alt="" />
+            </div>
+          </div>
+          <div class="col-5 my-2 frame filterItem drinks">
+            <img src="img/frame.png" alt="" class="img-fluid" />
+            <img class="food-img" src="img/pizza.png" alt="" />
+            <div class="text">
+              <p class="playfair m-0">Pizza</p>
+              <p class="montserat m-0">CONSECTOR ELIT</p>
+              <!-- <p class="small">
             Lorem ipsum dolor sit amet, consectetur adipiscing , sed do eiusmod
             tempor.
           </p> -->
+            </div>
+            <div class="cost">
+              <img src="img/line.png" class="top" alt="" />
+              <p>89</p>
+              <img src="img/line.png" class="bottom" alt="" />
+            </div>
+          </div>
         </div>
-        <div class="cost">
-          <img src="img/line.png" class="top" alt="" />
-          <p>89</p>
-          <img src="img/line.png" class="bottom" alt="" />
-        </div>
-      </div>
+      </main>
     </div>
-  </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-   
+    <script>
+      filterSelection("all")
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterItem");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
+      
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+      }
+      
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+      
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+      </script>
   </body>
 </html>

@@ -9,24 +9,37 @@ body {
   background-size: cover;
   min-height: 100vh;
 }
-div{
+div {
   transition: all 0.5s ease 0.1;
   box-sizing: border-box;
 }
+/* header */
+header nav {
+  position: relative;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding: 0 15px;
+  background-color: rgba(154, 154, 154, 56%);
+  justify-content: space-between !important;
+  box-shadow: 0 0 20px rgba(193, 123, 46, 35%);
+}
+
+.tr-gray {
+  background-color: #9a9a9a;
+}
 @font-face {
-  font-family: playfair ;
+  font-family: playfair;
   src: url(../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: montserat;
   src: url(../fonts/Montserrat-VariableFont_wght.ttf);
 }
-.playfair{
+.playfair {
   font-family: playfair;
   font-size: 15px;
-  
 }
-.montserat{
+.montserat {
   font-family: montserat;
   color: #f37000;
   font-size: 5px;
@@ -39,8 +52,8 @@ div{
   /* padding-left: 30px; */
   margin: 0 8px 0 15px;
 }
-.frame img{
-    /* transform: rotate(180deg); */
+.frame img {
+  /* transform: rotate(180deg); */
 }
 .frame .text {
   position: absolute;
@@ -55,85 +68,79 @@ div{
   font-size: smaller;
   transform: translate(-50%, -50%);
 }
-.frame .food-img{
-    position: absolute;
-    height: 100%;
-    top: 0px;
-    left: -3px;
-    object-fit: contain;
-    -webkit-filter: drop-shadow(5px 5px 10px #000000b6);
-    filter: drop-shadow(5px 5px 10px #000000a9);
-    /* transform: rotate(45deg); */
+.frame .food-img {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  left: -3px;
+  object-fit: contain;
+  -webkit-filter: drop-shadow(5px 5px 10px #000000b6);
+  filter: drop-shadow(5px 5px 10px #000000a9);
+  /* transform: rotate(45deg); */
 }
-.frame .cost{
-    position: absolute;
-    top: 0;
-    left: 52%;
-    height: 100%;
-}
-.frame .cost p{
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    font-size: 9px;
-    font-weight: bold;
-    transform: translate(-50%, -50%);  
-
-}
-.frame .cost .top{
-    position: absolute;
-    height: 33%;
-    top: 4px;
-}
-.frame .cost .bottom{
-    position: absolute;
-    height: 33%;
-    bottom: 4px;
-}
-
-
-/* # Preloader */
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
+.frame .cost {
+  position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #1a1814;
+  left: 52%;
+  height: 100%;
+}
+.frame .cost p {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  font-size: 9px;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+}
+.frame .cost .top {
+  position: absolute;
+  height: 33%;
+  top: 4px;
+}
+.frame .cost .bottom {
+  position: absolute;
+  height: 33%;
+  bottom: 4px;
 }
 
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #1a1814;
-  border-top-color: #cda45e;
-  border-bottom-color: #cda45e;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
+/* categories */
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px 0;
 }
-
-@-webkit-keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.cat_item {
+  background-color: #a8a8a8;
+  color: black;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2px 15px;
+  box-shadow: inset 0 5px 15px #787878, 3px 3px 6px rgba(0, 0, 0, 16%);
+  font-family: playfair;
 }
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
+.cat_item p {
+  margin: auto;
+}
+.filterItem {
+  display: none;
+}
+.show {
+  display: block;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-duration: var(--animate-duration);
+  animation-duration: var(--animate-duration);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
   }
-  100% {
-    transform: rotate(360deg);
+  to {
+    opacity: 1;
   }
 }
