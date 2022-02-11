@@ -6,24 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Menu</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
 
     <!-- Animate css -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/b26d6322df.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div id="loader"></div>
@@ -36,8 +36,54 @@
           <p class="my-auto">Logo</p>
         </nav>
       </header>
-      <main style="margin-top: 43vh;">
-        <div id="categories" class="categories animate__animated animate__fadeInUp">
+      <main style="margin-top: 3vh">
+        <!-- Slider About -->
+        <div
+          id="carouselExampleFade"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner rounded" style="height: 200px">
+            <div class="carousel-item active" data-bs-interval="1500">
+              <img src="img/rs1.jpg" class="w-100" alt="img/rs1.jpg" />
+            </div>
+            <div class="carousel-item" data-bs-interval="1500">
+              <img
+                src="img/rs2.jpg"
+                class="w-100"
+                alt="img/menu-background.jpg"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="1500">
+              <img
+                src="img/rs3.jpg"
+                class="w-100"
+                alt="img/menu-background.jpg"
+              />
+            </div>
+          </div>
+
+          <!-- About -->
+          <div class="about mt-4">
+            <!-- <div class="d-flex align-items-center">
+              <i class="fa-brands fa-instagram"></i>
+              <a href="#" class="nav-link p-0 mx-1 small text-black">M.mahdi_bsr</a>
+            </div>
+            <i class="fa-solid fa-phone"></i> -->
+            <div class="d-flex" style="height: 60px;">
+              <img src="img/restaurant-logo.jpg" alt="" class="logo rounded bg-shadow" data-aos="fade-down-right" data-aos-duration="1000">
+              
+              <div class="animate__flip animate__animated">
+                <p class="ms-3">this is a text that will replace with your own description about your restaurant</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Menu -->
+        <div
+          id="categories"
+          class="categories animate__animated animate__fadeInUp mt-4"
+        >
           <div class="cat_item" onclick="filterSelection('all')">
             <p>All</p>
           </div>
@@ -51,9 +97,12 @@
             <p>Salads</p>
           </div>
         </div>
-
         <div
-          class="row d-flex" id="con" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1500"
+          class="row d-flex"
+          id="con"
+          data-aos="fade-right"
+          data-aos-delay="200"
+          data-aos-duration="1500"
         >
           <div class="col-5 my-2 frame filterItem">
             <img src="img/frame.png" alt="" class="img-fluid" />
@@ -132,7 +181,7 @@
       AOS.init();
     </script>
     <script>
-      filterSelection("all")
+      filterSelection("all");
       function filterSelection(c) {
         var x, i;
         x = document.getElementsByClassName("filterItem");
@@ -142,38 +191,55 @@
           if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
         }
       }
-      
+
       function w3AddClass(element, name) {
         var i, arr1, arr2;
         arr1 = element.className.split(" ");
         arr2 = name.split(" ");
         for (i = 0; i < arr2.length; i++) {
-          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+          }
         }
       }
-      
+
       function w3RemoveClass(element, name) {
         var i, arr1, arr2;
         arr1 = element.className.split(" ");
         arr2 = name.split(" ");
         for (i = 0; i < arr2.length; i++) {
           while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
           }
         }
         element.className = arr1.join(" ");
       }
-      
+
       // Add active class to the current button (highlight it)
       var btnContainer = document.getElementById("myBtnContainer");
       var btns = btnContainer.getElementsByClassName("btn");
       for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function(){
+        btns[i].addEventListener("click", function () {
           var current = document.getElementsByClassName("active");
           current[0].className = current[0].className.replace(" active", "");
           this.className += " active";
         });
       }
-      </script>
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
