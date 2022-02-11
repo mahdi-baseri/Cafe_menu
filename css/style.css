@@ -133,6 +133,7 @@ header nav {
   font-size: small; 
   font-family: playfair;
   text-shadow: 2px 2px 1px rgb(194, 191, 191);
+  font-weight: bold;
 }
 #slider-item{
   height: 200px;
