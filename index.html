@@ -24,8 +24,7 @@
       src="https://kit.fontawesome.com/b26d6322df.js"
       crossorigin="anonymous"
     ></script>
-    <style>
-    </style>
+    <style></style>
   </head>
   <body>
     <div id="loader"></div>
@@ -72,11 +71,20 @@
               <a href="#" class="nav-link p-0 mx-1 small text-black">M.mahdi_bsr</a>
             </div>
             <i class="fa-solid fa-phone"></i> -->
-            <div class="d-flex" style="height: 60px;">
-              <img src="img/restaurant-logo.jpg" alt="" class="logo rounded bg-shadow" data-aos="fade-down-right" data-aos-duration="1000">
-              
+            <div class="d-flex" style="height: 60px">
+              <img
+                src="img/restaurant-logo.jpg"
+                alt=""
+                class="logo rounded bg-shadow"
+                data-aos="fade-down-right"
+                data-aos-duration="1000"
+              />
+
               <div class="animate__flip animate__animated">
-                <p class="ms-3 my-2">this is a text that will replace with your own description about your restaurant</p>
+                <p class="ms-3 my-2">
+                  this is a text that will replace with your own description
+                  about your restaurant
+                </p>
               </div>
             </div>
           </div>
@@ -100,25 +108,35 @@
           </div>
         </div>
         <!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
   Launch static backdrop modal
 </button> -->
 
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="true" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-body">
-        <img class="" src="img/pizza.png" alt="" />
-        <div>
-          <h1 class="">Pizza</h1>
-          <p class="">Lorem ipsum dolor sit amet, consecteur adipisicing elit, sed do eiusmod tempor.</p>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="staticBackdrop"
+          data-bs-backdrop="true"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <img class="" src="img/pizza.png" alt="" />
+                <div>
+                  <h1 class="">Pizza</h1>
+                  <p class="">
+                    Lorem ipsum dolor sit amet, consecteur adipisicing elit, sed
+                    do eiusmod tempor.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-    </div>
-  </div>
-</div>
         <div
           class="row d-flex"
           id="con"
@@ -127,7 +145,12 @@
           data-aos-duration="1500"
         >
           <div class="col-5 my-2 frame filterItem salads">
-            <a href="kfasfjaslfksf" class="stretched-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <a
+              href="kfasfjaslfksf"
+              class="stretched-link"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
               <img src="img/frame.png" alt="" class="img-fluid" />
             </a>
             <img class="food-img" src="img/cake.png" alt="" />
@@ -146,7 +169,12 @@
             </div>
           </div>
           <div class="col-5 my-2 frame filterItem foods">
-            <a href="kfasfjaslfksf" class="stretched-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <a
+              href="kfasfjaslfksf"
+              class="stretched-link"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
               <img src="img/frame.png" alt="" class="img-fluid" />
             </a>
             <img class="food-img" src="img/gril.png" alt="" />
@@ -165,7 +193,12 @@
             </div>
           </div>
           <div class="col-5 my-2 frame filterItem foods">
-            <a href="kfasfjaslfksf" class="stretched-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <a
+              href="kfasfjaslfksf"
+              class="stretched-link"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
               <img src="img/frame.png" alt="" class="img-fluid" />
             </a>
             <img class="food-img" src="img/hamberger.png" alt="" />
@@ -184,7 +217,12 @@
             </div>
           </div>
           <div class="col-5 my-2 frame filterItem pizza">
-            <a href="kfasfjaslfksf" class="stretched-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <a
+              href="kfasfjaslfksf"
+              class="stretched-link"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
               <img src="img/frame.png" alt="" class="img-fluid" />
             </a>
             <img class="food-img" src="img/pizza.png" alt="" />
@@ -271,5 +309,27 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
+    <script>
+      var loader;
+      function loadNow(opacity) {
+        if (opacity <= 0) {
+          displayContent();
+        } else {
+          loader.style.opacity = opacity;
+          window.setTimeout(function () {
+            loadNow(opacity - 0.05);
+          }, 100);
+        }
+      }
+      function displayContent() {
+        loader.style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+      }
+
+      document.addEventListener("DOMContentLoaded" , function(){
+        loader = document.getElementById('loader');
+        loadNow(1);
+      })
+    </script>
   </body>
 </html>
