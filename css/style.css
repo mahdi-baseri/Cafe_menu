@@ -18,7 +18,8 @@ header nav {
   padding: 0 15px;
   background-color: rgba(154, 154, 154, 56%);
   justify-content: space-between !important;
-  box-shadow: 0 0 20px rgba(193, 123, 46, 35%);
+  /* box-shadow: 0 0 20px rgba(193, 123, 46, 35%); */
+  box-shadow: inset 5px 5px 15px #525151, 3px 3px 10px #f371003a;
 }
 
 .tr-gray {
@@ -172,11 +173,42 @@ header nav {
 .bg-shadow {
   box-shadow: 0 0 10px rgb(73, 73, 73);
 }
+/* search */
+#search{
+  border-radius: 8px;
+  border: none;
+  box-shadow: 1px 1px 10px rgb(102, 101, 101), inset 1px 1px 10px rgb(134, 134, 134);
+  width: 75%;
+  background-color: transparent;
+  color: black;
+  padding: 2px 8px;
+  font-size: small;
+  line-height: normal;
+}
+#search:focus{
+  box-shadow: 1px 1px 10px rgb(71, 71, 71);
+  border: none;
+  outline: none;
+}
+#search::placeholder{
+  color: black;
+  font-size: small;
+}
 .about p {
   font-size: small;
   font-family: playfair;
   text-shadow: 2px 2px 1px rgb(194, 191, 191);
   font-weight: bold;
+  text-align: center;
+}
+.logo{
+  position: absolute;
+  box-shadow: 0 0 10px black;
+  bottom: -25px;
+  left: 50%;
+  margin-left: -35px;
+  width: 65px;
+  z-index: 1000;
 }
 #slider-item {
   height: 200px;
