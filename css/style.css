@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: url(../img/blank-bg.jpg);
   background-repeat: no-repeat;
@@ -60,7 +66,7 @@ header nav {
   top: 0;
   left: 0;
   z-index: 1050;
-  width: 100vw;
+  width: 100vh;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.185) !important;
 }
@@ -160,6 +166,7 @@ header nav {
   border-radius: 5px;
   text-align: center;
   font-size: small;
+  font-weight: bold;
   padding: 2px 15px;
   box-shadow: inset 0 5px 15px #525151, 3px 3px 10px #f371003a;
   font-family: playfair;
