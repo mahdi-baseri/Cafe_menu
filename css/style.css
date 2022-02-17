@@ -334,7 +334,7 @@ footer #credits {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #5a5959e8;
+  background: #444444f6;
 }
 
 #preloader:before {
