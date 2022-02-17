@@ -327,21 +327,17 @@ footer #credits {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #5a5959e5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #5a5959e8;
 }
 
 #preloader:before {
   content: "";
   position: fixed;
-  /* top: calc(50% - 30px);
-  left: calc(50% - 30px); */
-  border: 6px solid #575050;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #747371;
   border-top-color: #f37000;
   border-bottom-color: #f37000;
-  /* box-shadow: 0 0 20px rgb(226, 142, 46); */
   border-radius: 50%;
   width: 60px;
   height: 60px;
