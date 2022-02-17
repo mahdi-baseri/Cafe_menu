@@ -24,6 +24,7 @@
       src="https://kit.fontawesome.com/b26d6322df.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
     <style></style>
   </head>
   <body>
@@ -32,7 +33,12 @@
       <header>
         <nav class="navbar navbar-expand">
           <form action="#" method="post">
-            <input type="search" name="search" id="search" placeholder="Search">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search"
+            />
           </form>
           <p class="my-auto">Logo</p>
         </nav>
@@ -64,30 +70,29 @@
             </div>
           </div>
           <img
-          src="img/restaurant-logo.jpg"
-          alt=""
-          class="logo rounded bg-shadow"
-          data-aos="fade-down-right"
-          data-aos-duration="1000"
-        />
+            src="img/restaurant-logo.jpg"
+            alt=""
+            class="logo rounded bg-shadow"
+            data-aos="fade-down-right"
+            data-aos-duration="1000"
+          />
         </div>
-           <!-- About -->
-           <div class="about mt-3">
-            <!-- <div class="d-flex align-items-center">
+        <!-- About -->
+        <div class="about mt-3">
+          <!-- <div class="d-flex align-items-center">
               <i class="fa-brands fa-instagram"></i>
               <a href="#" class="nav-link p-0 mx-1 small text-black">M.mahdi_bsr</a>
             </div>
             <i class="fa-solid fa-phone"></i> -->
-            <div class="d-flex mt-4" style="height: 60px">
-              <div class="" data-aos="fade-left"
-              data-aos-duration="1000">
-                <p class="my-2">
-                  this is a text that will replace with your own description
-                  about your restaurant
-                </p>
-              </div>
+          <div class="d-flex mt-4" style="height: 60px">
+            <div class="" data-aos="fade-left" data-aos-duration="1000">
+              <p class="my-2">
+                this is a text that will replace with your own description about
+                your restaurant
+              </p>
             </div>
           </div>
+        </div>
         <!-- Categories -->
         <div
           id="categories"
@@ -434,29 +439,46 @@
           </div>
         </div>
       </main>
-  
     </div>
     <footer>
       <div id="footer-content">
         <h3 class="m-0">Cafe Menu</h3>
         <p>Tehran, kh pourshirazi, pelak 23</p>
         <a href="tel:09371962511">Phone: <small>09371962511</small></a>
-        <a href="mailto:m.mahdibaseri@gmail.com">Email: <small>M.mahdibaseri@gmail.com</small></a>
+        <a href="mailto:m.mahdibaseri@gmail.com"
+          >Email: <small>M.mahdibaseri@gmail.com</small></a
+        >
         <div id="social" class="d-flex">
-          <a href="instagram://user?username=M.mahdi_bsr"><i class="fa-brands fa-instagram"></i></a>
+          <a href="instagram://user?username=M.mahdi_bsr"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
           <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="whatsapp://send?phone=989371962511&text=سلام"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="whatsapp://send?phone=989371962511&text=سلام"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
           <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
         <div id="copyright">
-          © Copyright <strong><a href="instagram://user?username=M.mahdi_bsr"> M.mahdi_bsr </a></strong> . All Rights Reserved
+          © Copyright
+          <strong
+            ><a href="instagram://user?username=M.mahdi_bsr">
+              M.mahdi_bsr
+            </a></strong
+          >
+          . All Rights Reserved
         </div>
         <div id="credits">
-          Designed by <a href="instagram://user?username=M.mahdi_bsr/">M.mahdi_bsr</a>
-      </div>
+          Designed by
+          <a href="instagram://user?username=M.mahdi_bsr/">M.mahdi_bsr</a>
+        </div>
       </div>
     </footer>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa-solid fa-arrow-up"></i></a>
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="fa-solid fa-arrow-up"></i
+    ></a>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
@@ -522,21 +544,45 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
+    <script src="swiper-bundle.min.js"></script>
     <script>
-      // back to top
-      let backtotop = select('.back-to-top')
-      if (backtotop) {
-        const toggleBacktotop = () => {
-          if (window.scrollY > 100) {
-            backtotop.classList.add('active')
+      (function () {
+        "use strict";
+        /**
+         * Easy selector helper function
+         */
+        const select = (el, all = false) => {
+          el = el.trim();
+          if (all) {
+            return [...document.querySelectorAll(el)];
           } else {
-            backtotop.classList.remove('active')
+            return document.querySelector(el);
           }
-        }
-        window.addEventListener('load', toggleBacktotop)
-        onscroll(document, toggleBacktotop)
-      
-    </script>
+        };
 
+        
+
+        // back to top
+        let backtotop = select(".back-to-top");
+        if (backtotop) {
+          const toggleBacktotop = () => {
+            if (window.scrollY > 100) {
+              backtotop.classList.add("active");
+            } else {
+              backtotop.classList.remove("active");
+            }
+          };
+          window.addEventListener("load", toggleBacktotop);
+          onscroll(document, toggleBacktotop);
+        }
+        // pre loader
+        let preloader = select("#preloader");
+        if (preloader) {
+          window.addEventListener("load", () => {
+            preloader.remove();
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
