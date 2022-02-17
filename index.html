@@ -33,13 +33,14 @@
         <nav class="navbar navbar-expand">
           <form action="#" method="post">
             <input
+            autocomplete="off"
               type="search"
               name="search"
               id="search"
               placeholder="Search"
             />
           </form>
-          <p class="my-auto">Logo</p>
+          <p class="my-auto" id="header-title">Cafe Menu</p>
         </nav>
       </header>
       <main style="margin-top: 3vh">
@@ -97,7 +98,7 @@
           id="categories"
           class="categories animate__animated animate__fadeInUp mt-3"
         >
-          <div class="cat_item" onclick="filterSelection('pizza')">
+          <div class="cat_item" onclick="filterSelection('all')">
             <p>pizza</p>
           </div>
           <div class="cat_item" onclick="filterSelection('foods')">
@@ -110,10 +111,6 @@
             <p>Salads</p>
           </div>
         </div>
-        <!-- Button trigger modal -->
-        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Launch static backdrop modal
-</button> -->
 
         <!-- Modal -->
         <div
