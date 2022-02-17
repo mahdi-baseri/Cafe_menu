@@ -239,7 +239,6 @@ header nav {
 }
 footer {
   background-color: rgba(154, 154, 154, 56%);
-  border-radius: 6px;
   padding: 15px 15px;
   /* box-shadow: inset 5px 5px 15px #525151, 3px 3px 10px #f371003a; */
   margin-top: 50px;
@@ -256,8 +255,15 @@ footer #social i{
   border-radius: 50%;
   padding: 8px;
 }
+footer #social i:hover{
+  color: #a8a8a8;
+  background-color: black;
+  margin: 10px 3px;
+  border-radius: 50%;
+  padding: 8px;
+}
 footer p{
-  margin: 2px 0 10px 0;
+  margin: 5px 0 10px 0;
   width: 60%;
   text-align: center;
   font-size: small;
