@@ -23,7 +23,7 @@ header nav {
   margin-top: 15px;
   padding: 0 20px;
 flex-direction: row-reverse;
-  background-color: rgba(154, 154, 154, 56%);
+  background-color: rgba(154, 154, 154, 0.897);
   justify-content: space-between !important;
   /* box-shadow: 0 0 20px rgba(193, 123, 46, 35%); */
   box-shadow: inset 5px 5px 15px #525151, 3px 3px 10px #f371003a;
